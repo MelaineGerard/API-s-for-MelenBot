@@ -2,11 +2,8 @@ FROM alpine:latest
 LABEL maintainer="Melaine GERARD <pro@melaine-gerard.fr>"
 LABEL version="0.1"
 
+RUN mkdir /app
 WORKDIR /app
-
-run mkdir /app
-
-
 
 RUN apk add --update --no-cache \
 git \
