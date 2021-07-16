@@ -4,7 +4,7 @@ services:
   melenbotapi:
     build:
       context: ./
-      dockerfile: ./docker/DockerFile
+      dockerfile: ./docker/Dockerfile
     restart: always
     ports:
       - "10000:3000"
