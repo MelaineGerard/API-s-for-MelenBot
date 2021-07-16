@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  melenbotapi:
+    build:
+      context: ./
+      dockerfile: ./docker/DockerFile
+    restart: always
+    ports:
+      - "10000:3000"
+    volumes:
+      - "./:/app"
