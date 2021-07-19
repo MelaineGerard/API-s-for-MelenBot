@@ -21,6 +21,17 @@ app.get('/hug', (req, res) => {
     })
 })
 
+app.get('/pikachu', (req, res) => {
+    if(config.pikachu.length === 0){
+        return res.json({
+            "message": "No image found !"
+        })
+    }
+    return res.json({
+        "image": `${config.url}/pikachu/${config.pikachu[utils.between(0, config.pikachu.length)]}`
+    })
+})
+
 app.get('*', (req, res) => {
     return res.json({
         "message": "route not found"
